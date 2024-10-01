@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@700&display=swap');
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+
+
+:root {
+    --color_white_bg: #FFFFFF;
+    --color_black_bg: #000000;
+    --color_black_text: #000000;
+    --color_red_bg: #E80913;
+    --color_red_text: #E80913;
+    --color_white_text: #FFFFFF;
+    --color_title_coach: #EAEAEB;
+    --color_black_opacity_text: #AEAEAE;
+    --color_red_icon: #E80913;
+    --color_hover_btn: black;
+    --color_black_title_card_icon: #111111;
+}
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ____________________________________ css header ____________________________________________ */
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--color_white_bg);
+    height: 64px;
+}
+
+header .navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 19px 35px;
+}
+
+
+header .navbar .logo {
+    margin-right: auto;
+}
+
+.navbar .menu_box .menu_icon {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* ___________________________________________________________  css banner _______________________________________ */
+
+
+
+.main .banner {
+    background: var(--color_black_bg);
+    padding: 1px;
+}
+
+.main .banner .text_banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.banner .text_banner .content_box {
+    padding: 50px 50px;
+
+}
+
+.banner .text_banner .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color_red_text);
+}
+
+.banner .text_banner .text {
+    margin: 19px 0;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: var(--color_white_text);
+}
+
+.banner .text_banner .btn {
+    text-transform: uppercase;
+    color: var(--color_white_text);
+    padding: 15px 52px;
+    background: var(--color_red_bg);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+.banner .img_banner_box .img_banner {
+
+    width: 100%;
+}
+
+
+/* ________________________________________ css good_raison ____________________________ */
+
+
+.main .good_raison {
+    background: var(--color_red_bg);
+}
+
+.main .good_raison_text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main .good_raison_text .title {
+    margin: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color_white_text);
+}
+
+.main .good_raison_text .text {
+    line-height: 38px;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: var(--color_white_text);
+}
+
+
+/*____________________________________________ css good_raison_cards ________________________________  */
+
+
+.good_raison .good_raison_cards {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, fr);
+    padding-bottom: 50px;
+}
+
+
+.good_raison .good_raison_cards .card {
+    text-align: center;
+    background: var(--color_white_bg);
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.good_raison_cards .card .icon {
+    background-color: var(--color_red_bg);
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+
+}
+
+.good_raison_cards .card .title {
+    line-height: 38px;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color_black_text);
+
+}
+
+.good_raison_cards .card .text {
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--color_black_text);
+
+}
+
+
+
+
+/*______________________________________ css about us and history __________________________________ */
+
+
+.main .about {
+    background-color: var(--color_white_bg);
+
+}
+
+.main .about .container_property {
+    padding: 87px 50px;
+}
+
+.main .about .image {
+
+    padding: 30px 0;
+
+}
+
+.main .about .image img {
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.about .about_text {
+
+    padding: 45px 0;
+}
+
+
+
+.main .about .title_1,
+.main .about .title_2 {
+
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color_black_text);
+
+}
+
+.main .about .text_1,
+.main .about .text_2 {
+    padding: 20px 0;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 300px;
+}
+
+.main .about .btn {
+    text-transform: uppercase;
+    color: var(--color_white_text);
+    padding: 15px 52px;
+    background: var(--color_red_bg);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+
+
+@media screen and (min-width:935px) {
+    .main .banner .container_property {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+    .main .good_raison {
+        background: var(--color_red_bg);
+    }
+
+    .good_raison .good_raison_cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .about .about_text {
+        padding: 30px 60px;
+    }
+
+}
+
+@media screen and (min-width:1000px) {
+
+
+    .good_raison .good_raison_cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, fr);
+        padding: 20px;
+    }
+
+    .good_raison .good_raison_cards .card {
+        margin: 0;
+    }
+
+    .main .about .container_property {
+        display: flex;
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .good_raison .good_raison_cards {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 20px;
+    }
+
+    .good_raison .good_raison_cards .card {
+        margin: 0;
+    }
+
+
+}
