@@ -4,10 +4,17 @@ FROM alpine:3.21.3 as builder
 WORKDIR /app
 COPY . .
 
-# Étape 2: Image finale avec Nginx sécurisé
 FROM nginxinc/nginx-unprivileged:1.28.0-alpine-slim
-# Copie des fichiers statiques
-RUN rm -rf /usr/share/nginx/html/*
-COPY --from=builder /app /usr/share/nginx/html
+
+# 1. Suppression sécurisée avec les bonnes permissions
+USER root
+RUN rm -f /usr/share/nginx/html/* || true
+
+# 2. Copie des nouveaux fichiers
+COPY --from=builder --chown=nginx:nginx /app /usr/share/nginx/html
+
+# 3. Retour à l'utilisateur non-privilégié
+USER nginx
+
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
